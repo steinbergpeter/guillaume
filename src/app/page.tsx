@@ -1,7 +1,7 @@
 export default function Home() {
     return (
         <main className="">
-            <p>Hello world, we are Dockerized!</p>
+            <p>Home Page of my application</p>
         </main>
     )
 }
