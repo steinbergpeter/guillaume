@@ -36,7 +36,7 @@ const Picker = () => {
                         className={`
                             border w-24 text-white px-2 py-1 rounded-xl
                             bg-${col ? col : 'gray'}-600
-                            hover:bg-red-400
+                            hover:bg-${col ? col : 'gray'}-400
                             ${
                                 color === col
                                     ? 'border-white'
