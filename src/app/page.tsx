@@ -8,8 +8,8 @@ export default async function Home() {
 
     return (
         <main className="">
-            <Header />
-            <p>Home Page of my application</p>
+            <h1 className="text-xl">Home Page</h1>
+            <br />
             <p>{JSON.stringify(myInfo)}</p>
             <Add />
         </main>

@@ -2,20 +2,17 @@ import type { Person } from '../type'
 
 const fetchDataFromApi = async (): Promise<Person[] | string> => {
     try {
-        const url = 'http:localhost:3001/api/users'
-        const headers = {
-            Accept: 'application/json',
-            method: 'GET',
-        }
-        const res = await fetch(url, { headers })
+        const res = await fetch('http://localhost:3001/api/users', {
+            headers: {
+                Accept: 'application/json',
+                method: 'GET',
+            },
+        })
         if (!res) throw new Error('fetchData gets no res')
         const data = (await res.json()) as Person[]
-        // console.log(data)
         return data
     } catch (error) {
-        const err = (error as Error).message
-        // console.log(err)
-        return err
+        return (error as Error).message
     }
 }
 
